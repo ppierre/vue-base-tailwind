@@ -1,6 +1,6 @@
 # Test d'interactions basiques
 
-Les éditions sont à faire dans `/src/App.vue`
+Les éditions sont à faire dans [`/src/App.vue`](./src/App.vue)
 
 ## Menu
 
