@@ -1,5 +1,7 @@
 # Test d'interactions basiques
 
+Les éditions sont à faire dans `/src/App.vue`
+
 ## Menu
 
 - Ajouter l'HTML du menu :
