@@ -108,3 +108,13 @@ Les éditions sont à faire dans [`/src/App.vue`](./src/App.vue)
 - Testez, faire un commit
 - Modifier le code de la section/boucle pour qu'il ait la même interaction (bouton, texte caché) que les accordéons précedant. Utiliser `key` à la place du nombre.
 - Testez, faire un commit
+
+## Si vous avez fini
+
+- Faire que cliquer sur la section ouverte la ferme.
+  - Tester si `key` est égale à `sectionOpen`
+    - Si oui mettre `null` dans `sectionOpen`
+    - Sinon mettre `key` dans `sectionOpen`
+- Ajouter le slider fait au S1 (HTML / CSS)
+  - Traduire le CSS en classe Tailwind
+  - Suivre la documentation de [Vue sur les templates refs](https://vuejs.org/guide/essentials/template-refs.html) pour addapter le `x-ref`
