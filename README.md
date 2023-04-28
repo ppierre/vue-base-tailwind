@@ -111,6 +111,10 @@ Les éditions sont à faire dans [`/src/App.vue`](./src/App.vue)
 
 ## Si vous avez fini
 
+- Changer l'aspect du menu
+  - Changer la [couleur de fond](https://tailwindcss.com/docs/background-color#basic-usage)
+  - Changer sa [largeur](https://tailwindcss.com/docs/width)
+  - Et mettre en forme le reste en lisant la doc de [TailwindCSS](https://tailwindcss.com/docs/utility-first)
 - Faire que cliquer sur la section ouverte la ferme.
   - Tester si `key` est égale à `sectionOpen`
     - Si oui mettre `null` dans `sectionOpen`
