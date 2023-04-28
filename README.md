@@ -60,7 +60,7 @@ Les éditions sont à faire dans [`/src/App.vue`](./src/App.vue)
 - Pour chaque section, ajouter et compléter dans l'HTML :
   ```html
   <section>
-    <button class="text-xl" @click="/* change `sectionOpen` à 1 */">bouton 1</button>
+    <button class="text-xl" @pointerdown="/* change `sectionOpen` à 1 */">bouton 1</button>
     <p v-show="/* teste si `sectionOpen` est égale à 1 */">loren...</p>
   </section>
   ```
