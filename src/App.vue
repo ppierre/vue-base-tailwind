@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import PersonneCard from './components/PersonneCard.vue'
 import type { Personne } from './types'
 
 const personnesListe: Personne[] = [
@@ -14,11 +15,18 @@ const personnesListe: Personne[] = [
   </header>
 
   <main>
-    <div v-for="personne in personnesListe" class="personne-card border-2 p-1">
-      <p>nom : {{ personne.nom }}</p>
-      <p>age : {{ personne.age }}</p>
-      <p>marié : {{ personne.marie ? 'oui' : 'non' }}</p>
-    </div>
+    <!-- Passe 'props' individuelles -->
+    <PersonneCard nom="Paul" :age="25" marie />
+    <!-- Passe un objet instance de "Personne" -->
+    <PersonneCard
+      v-bind="{
+        nom: 'Renée',
+        age: 33,
+        marie: false
+      }"
+    />
+    <!-- Passe un élément du tableau de "Personne" -->
+    <PersonneCard v-bind="personnesListe[0]" />
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora recusandae et dolorem odit
       beatae illo labore, praesentium quidem nulla eveniet, at voluptatem incidunt. Eaque explicabo,
