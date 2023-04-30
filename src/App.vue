@@ -1,9 +1,6 @@
 <script setup lang="ts">
-interface Personne {
-  nom: string
-  age: number
-  marie: boolean
-}
+import type { Personne } from './types'
+
 const personnesListe: Personne[] = [
   { nom: 'Jean', age: 22, marie: false },
   { nom: 'Paul', age: 25, marie: true },
