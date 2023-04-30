@@ -10,16 +10,16 @@ npm i -f
 
 # Simple type/composant en Vue3/TypeScript
 
-## Synposys
+## Synopsis
 
-- Liste avec répetions
+- Liste avec répétions
 - Boucle sur des données (tableau d'objets)
 - Type d'un objet
   - Et donc type du tableau
 - Composant affichant un objet (une instance)
-  - Rendre le composant Vue paramétrique (reçoit l'instance en paramétre)
-- "Appeler" (afficher) le composant Vue en lui passant une insantance (stocké dans une variable)
-- Afficher le compsant Vue dans la boucle
+  - Rendre le composant Vue paramétrique (reçois l'instance en paramètre)
+- "Appeler" (afficher) le composant Vue en lui passant une instance (stocké dans une variable)
+- Afficher le composant Vue dans la boucle
 - Manipuler les données avant de les afficher :
   - [`sort`][sort] : trier
   - [`slice`][slice] : partie
@@ -27,7 +27,7 @@ npm i -f
   - [`map`][map] : transformer
   - ...
 
-## Liste avec répetions
+## Liste avec répétions
 
 [Github](https://github.com/ppierre/vue-base-tailwind/blob/01-liste-avec-r%C3%A9petions/src/App.vue#L11-L25)
 
@@ -121,7 +121,7 @@ const personnesListe: Personne[] = [
 
 TODO:explication
 
-### Conposant sans paramétre
+### Composant sans paramètre
 
 `/src/components/PersonneCard.vue`
 
@@ -135,7 +135,7 @@ TODO:explication
 </template>
 ```
 
-### Composant avec paramétre
+### Composant avec paramètre
 
 [`/src/components/PersonneCard.vue`](https://github.com/ppierre/vue-base-tailwind/blob/05-usage-composant/src/components/PersonneCard.vue#L1)
 
@@ -183,7 +183,7 @@ TODO:explication
 <PersonneCard v-for="unPersonne in personnesListe" :key="unPersonne.nom" v-bind="unPersonne" />
 ```
 
-## Traitement données
+## Traitement des données
 
 TODO:explication et lien code
 
