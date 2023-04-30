@@ -15,18 +15,7 @@ const personnesListe: Personne[] = [
   </header>
 
   <main>
-    <!-- Passe 'props' individuelles -->
-    <PersonneCard nom="Paul" :age="25" marie />
-    <!-- Passe un objet instance de "Personne" -->
-    <PersonneCard
-      v-bind="{
-        nom: 'Renée',
-        age: 33,
-        marie: false
-      }"
-    />
-    <!-- Passe un élément du tableau de "Personne" -->
-    <PersonneCard v-bind="personnesListe[0]" />
+    <PersonneCard v-for="unPersonne in personnesListe" :key="unPersonne.nom" v-bind="unPersonne" />
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora recusandae et dolorem odit
       beatae illo labore, praesentium quidem nulla eveniet, at voluptatem incidunt. Eaque explicabo,
