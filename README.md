@@ -6,7 +6,7 @@ nécessite Vue 3.3 ; si probléme de dépendance, faire :
 npm i -f
 ```
 
-# COURS
+# COURS Partie 1
 
 # Simple type/composant en Vue3/TypeScript
 
@@ -196,3 +196,34 @@ TODO:explication et lien code
 [slice]: https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 [filter]: https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 [map]: https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+# Cours Partie 2
+
+## externiliser les données
+
+Faire menu contextuel `refactor... / Move to a new file`
+`/src/App.vue` :
+
+```html
+<script setup lang="ts">
+  import PersonneCard from './components/PersonneCard.vue'
+  import { personnesListe } from './personnesListe'
+</script>
+```
+
+`/src/personnesListe.ts` :
+
+```ts
+import type { Personne } from './types'
+
+export const personnesListe: Personne[] = [
+  { nom: 'Jean', age: 22, marie: false },
+  { nom: 'Paul', age: 25, marie: true },
+  { nom: 'Renée', age: 33, marie: false }
+]
+```
+
+## usage de route
+
+- `/src/App.vue` avec `<Suspence>` et `<RouterView>`
+- `/src/pages/index.vue` : liste les personnes
