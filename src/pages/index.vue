@@ -5,6 +5,19 @@ import { personnesListe } from '@/personnesListe'
 
 <template>
   <div>
-    <PersonneCard v-for="unPersonne in personnesListe" :key="unPersonne.nom" v-bind="unPersonne" />
+    <h2 class="text-2xl">Liste les liens</h2>
+    <ul>
+      <li v-for="(unPersonne, indice) in personnesListe" :key="indice">
+        <RouterLink
+          class="text-red-600 hover:text-red-400"
+          :to="{
+            name: 'personnes-id',
+            params: { id: indice }
+          }"
+        >
+          {{ unPersonne.nom }}
+        </RouterLink>
+      </li>
+    </ul>
   </div>
 </template>

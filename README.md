@@ -257,3 +257,26 @@ Tester les url :
 - http://localhost:5173/personnes/2
 
 On passe simpement en paramétre l'ID (ici l'indice du tableau). Pour retrouver les données à afficher.
+
+## Liste de liens (vers des "personnes")
+
+On change les `<PesonneCard>` de `/src/pages/index.vue` par des `<RouterLink>`
+
+```html
+<li v-for="(unPersonne, indice) in personnesListe" :key="indice">
+  <RouterLink
+    class="text-red-600 hover:text-red-400"
+    :to="{
+      name: 'personnes-id',
+      params: { id: indice }
+    }"
+  >
+    {{ unPersonne.nom }}
+  </RouterLink>
+</li>
+```
+
+On remaquera l'usage d'un binding (`:`) pour la props `to` pour pouvoir passer un objet :
+
+- `name` : le nom de la route (ne change pas avec les paramétres)
+- `params` : un objet contenant les paramètres (`props`) passés au coposant affiché par la route (de `/src/pages/...` dans `<RouterView>`)
