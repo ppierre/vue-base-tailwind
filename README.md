@@ -1,6 +1,6 @@
 # Test de type TypeScript avec composant
 
-nécessite Vue 3.3 ; si probléme de dépendance, faire :
+Nécessite Vue 3.3 ; si problème de dépendance, faire :
 
 ```
 npm i -f
@@ -12,7 +12,7 @@ npm i -f
 
 ## Synopsis
 
-- Liste avec répétions
+- Liste avec répétitions
 - Boucle sur des données (tableau d'objets)
 - Type d'un objet
   - Et donc type du tableau
@@ -27,7 +27,7 @@ npm i -f
   - [`map`][map] : transformer
   - ...
 
-## Liste avec répétions
+## Liste avec répétitions
 
 [Github](https://github.com/ppierre/vue-base-tailwind/blob/01-liste-avec-r%C3%A9petions/src/App.vue#L11-L25)
 
@@ -199,9 +199,9 @@ TODO:explication et lien code
 
 # Cours Partie 2
 
-## externiliser les données
+## externaliser les données
 
-Faire menu contextuel `refactor... / Move to a new file`
+Faire avec menu contextuel `refactor... / Move to a new file`
 `/src/App.vue` :
 
 ```html
@@ -228,7 +228,7 @@ export const personnesListe: Personne[] = [
 - `/src/App.vue` avec `<Suspence>` et `<RouterView>`
 - `/src/pages/index.vue` : liste les personnes
 
-## route avec paramétre pour afficher une personne
+## route avec paramètre pour afficher une personne
 
 - `/src/pages/personnes/[id].vue`
 
@@ -250,13 +250,13 @@ export const personnesListe: Personne[] = [
 </template>
 ```
 
-Tester les url :
+Tester les URL :
 
 - http://localhost:5173/personnes/0
 - http://localhost:5173/personnes/1
 - http://localhost:5173/personnes/2
 
-On passe simpement en paramétre l'ID (ici l'indice du tableau). Pour retrouver les données à afficher.
+On passe simplement en paramètre l'ID (ici l'indice du tableau). Pour retrouver les données à afficher.
 
 ## Liste de liens (vers des "personnes")
 
@@ -276,7 +276,7 @@ On change les `<PesonneCard>` de `/src/pages/index.vue` par des `<RouterLink>`
 </li>
 ```
 
-On remaquera l'usage d'un binding (`:`) pour la props `to` pour pouvoir passer un objet :
+On remarquera l'usage d'un binding (`:`) pour la props `to` pour pouvoir passer un objet :
 
-- `name` : le nom de la route (ne change pas avec les paramétres)
-- `params` : un objet contenant les paramètres (`props`) passés au coposant affiché par la route (de `/src/pages/...` dans `<RouterView>`)
+- `name` : le nom de la route (ne change pas avec les paramètres)
+- `params` : un objet contenant les paramètres (`props`) passés au composant affiché par la route (de `/src/pages/...` dans `<RouterView>`)
