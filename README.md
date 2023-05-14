@@ -227,3 +227,33 @@ export const personnesListe: Personne[] = [
 
 - `/src/App.vue` avec `<Suspence>` et `<RouterView>`
 - `/src/pages/index.vue` : liste les personnes
+
+## route avec paramétre pour afficher une personne
+
+- `/src/pages/personnes/[id].vue`
+
+```html
+<script setup lang="ts">
+  import PersonneCard from '@/components/PersonneCard.vue'
+  import { personnesListe } from '@/personnesListe'
+  import type { Personne } from '@/types'
+
+  const props = defineProps<{ id: string }>()
+
+  const unPersonne: Personne = personnesListe[Number(props.id)]
+</script>
+<template>
+  <div>
+    <h2 class="text-xl">Une personne</h2>
+    <PersonneCard v-bind="unPersonne" />
+  </div>
+</template>
+```
+
+Tester les url :
+
+- http://localhost:5173/personnes/0
+- http://localhost:5173/personnes/1
+- http://localhost:5173/personnes/2
+
+On passe simpement en paramétre l'ID (ici l'indice du tableau). Pour retrouver les données à afficher.
